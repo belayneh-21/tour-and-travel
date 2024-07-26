@@ -8,40 +8,73 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <style>
+      @media (max-width: 640px) {
+        .nav-links {
+          position: fixed;
+          background-color: rgba(31, 41, 55, 0.8);
+          width: 160px;
+          height: 70vh;
+          top: 0;
+          right: -160px;
+          z-index: 2;
+          transition: 1s;
+        }
+      }
+      .nav-links i {
+        padding: 10px;
+        padding-left: 20px;
+      }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <section
-      class="w-full h-[80vh] bg-[url('images/rocky.jpg')] bg-center bg-cover"
+      class="w-full h-[80vh] bg-[url('images/about/rocky.jpg')] bg-center bg-cover relative"
     >
-      <div class="bg-gray-800 bg-opacity-80 flex justify-between py-8 px-6">
+      <nav
+        class="bg-gray-800 bg-opacity-50 flex justify-between py-0 sm:py-8 px-6 items-center"
+      >
         <h1 class="text-white font-bold text-xl sm:text-2xl">
           ADVENTUR TRAVELS
         </h1>
-        <div class="block" id="menu-button">
+        <div class="nav-links" id="menuButton">
           <i
-            class="fa fa-times text-white text-2xl lg:hidden"
+            class="fa fa-times text-white text-xl block cursor-pointer lg:hidden"
             onclick="hideMenu()"
           ></i>
-          <ul class="hidden lg:flex text-white font-bold text-base">
-            <li class="list-none px-5"><a href="index.html">HOME</a></li>
-            <li class="list-none px-5"><a href="about.html">ABOUT US</a></li>
-            <li class="list-none px-5"><a href="tour.html">TOUR PACKAGE</a></li>
-            <li class="list-none px-5"><a href="booking.html">BOOKING</a></li>
+          <ul class="flex-1 text-center font-bold">
+            <li class="block sm:inline-block relative list-none px-5">
+              <a href="index.html " class="text-white text-base no-underline"
+                >HOME</a
+              >
+            </li>
+            <li class="block sm:inline-block relative list-none px-5">
+              <a href="about.html" class="text-white text-base no-underline"
+                >ABOUT US</a
+              >
+            </li>
+            <li class="block sm:inline-block relative list-none px-5">
+              <a href="tour.html" class="text-white text-base no-underline"
+                >TOUR PACKAGE</a
+              >
+            </li>
+            <li class="block sm:inline-block relative list-none px-5">
+              <a href="booking.html" class="text-white text-base no-underline"
+                >BOOKING</a
+              >
+            </li>
           </ul>
         </div>
         <i
-          class="fa fa-bars text-white text-2xl lg:hidden"
+          class="fa fa-bars text-white text-xl block mr-5 my-10 cursor-pointer lg:hidden"
           onclick="showMenu()"
         ></i>
-      </div>
+      </nav>
       <div class="flex flex-col justify-center items-center text-white h-3/5">
         <h1 class="text-4xl mx-4 sm:mx-96 sm:text-5xl font-bold text-center">
           About Us
         </h1>
-        <p class="mx-4 sm:mx-96 pt-6 sm:pt-10 text-xl sm:text-2xl text-center">
-          Experience the World’s Wonders
-        </p>
       </div>
     </section>
 
@@ -89,21 +122,21 @@
     </section>
 
     <!-- Our Members Section -->
-    <section class="m-auto w-5/6  my-10 mb-20">
+    <section class="m-auto w-5/6 my-10 mb-20">
       <h2 class="font-bold text-4xl text-center text-blue-500">Our Members</h2>
       <div class="mx-auto p-4 pt-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
-        <div class="rounded-lg overflow-hidden shadow-lg  p-4">
+        <div class="rounded-lg overflow-hidden shadow-lg p-4">
           <img
-            src="images/skipper.jpg"
+            src="images/about/skipper.jpg"
             alt=""
             class="w-3/4 object-top h-48 object-cover rounded-t-lg"
           />
           <h3 class="text-xl pt-5 font-bold text-gray-800 mb-4">CEO</h3>
           <p class="text-black leading-relaxed">Skipper</p>
         </div>
-        <div class="rounded-lg overflow-hidden shadow-lg  p-4">
+        <div class="rounded-lg overflow-hidden shadow-lg p-4">
           <img
-            src="images/kulalski.jpg"
+            src="images/about/kulalski.jpg"
             alt=""
             class="w-3/4 object-top h-48 object-cover rounded-t-lg"
           />
@@ -112,9 +145,9 @@
           </h3>
           <p class="text-black leading-relaxed">Kuwalski</p>
         </div>
-        <div class="rounded-lg overflow-hidden shadow-lg  p-4">
+        <div class="rounded-lg overflow-hidden shadow-lg p-4">
           <img
-            src="images/rico.jpg"
+            src="images/about/rico.jpg"
             alt=""
             class="w-3/4 object-top h-48 object-cover rounded-t-lg"
           />
@@ -124,11 +157,68 @@
       </div>
     </section>
 
+    <!-- what we offer  -->
+
+    <section class="m-auto my-10 py-12 bg-gray-50 w-5/6">
+      <div class="mx-auto px-4">
+        <div class="text-center mb-8">
+          <h2 class="text-4xl font-bold text-gray-900">What We Offer</h2>
+          <p class="mt-4 text-lg text-gray-600">
+            Explore our diverse range of travel services designed to make your
+            next trip unforgettable.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+              Tailored Tours
+            </h3>
+            <p class="text-gray-600 text-justify text-lg">
+              Experience travel like never before with our customized
+              itineraries. Whether you're interested in cultural tours,
+              adventure trips, historical explorations, or culinary journeys,
+              our experts will craft a personalized plan that caters to your
+              specific interests and preferences. Enjoy the freedom of a bespoke
+              travel experience that fits your pace and desires.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+              Luxury Travel
+            </h3>
+            <p class="text-gray-600 text-justify text-lg">
+              Indulge in the epitome of luxury with our exclusive travel
+              experiences. From opulent accommodations and private transfers to
+              gourmet dining and VIP access to top attractions, we ensure every
+              detail is meticulously planned. Escape the ordinary and immerse
+              yourself in unparalleled comfort and sophistication, creating
+              memories that will last a lifetime.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+              Group Excursions
+            </h3>
+            <p class="text-gray-600 text-justify text-lg">
+              Join like-minded travelers on our carefully curated group tours
+              for a fun and social adventure. Whether you are exploring bustling
+              cities, serene landscapes, or exotic destinations, our group
+              excursions offer the perfect balance of organized activities and
+              free time. Forge new friendships and share experiences with fellow
+              travelers, making every journey both enjoyable and memorable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Feedback Section -->
     <section
-      class="bg-gradient-to-b from-gray-900 to-gray-600 h-screen text-white p-4"
+      class="w-full bg-[url('images/about/bg.jpg')] bg-cover bg-center h-screen text-white p-4"
     >
-      <div class="mt-10 max-w-2xl m-auto p-4 sm:p-12 ">
+      <div
+        class="mt-20 max-w-2xl m-auto p-4 sm:p-12 bg-gray-800 bg-opacity-70 rounded-xl"
+      >
         <h2 class="text-2xl font-bold mb-4">Leave Your Feedback</h2>
         <form>
           <div class="mb-4">
@@ -168,7 +258,7 @@
     </section>
 
     <section
-      class="w-full bg-[url('images/footer.jpg')] bg-cover bg-center pt-20 pb-10"
+      class="w-full bg-[url('images/home/footer.jpg')] bg-cover bg-center pt-20 pb-10"
     >
       <div class="p-0 sm:p-16">
         <div class="flex flex-wrap justify-around pb-10">
@@ -233,12 +323,12 @@
     </section>
 
     <script>
-      const menu = document
-        .getElementById("menu-button")
-        .addEventListener("click", showMenu);
+      const items = document.getElementById("menuButton");
       function showMenu() {
-        const menu = document.querySelector("ul");
-        menu.classList.toggle("hidden");
+        items.style.right = "0px";
+      }
+      function hideMenu() {
+        items.style.right = "-240px";
       }
     </script>
   </body>

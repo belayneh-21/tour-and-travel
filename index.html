@@ -8,33 +8,69 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <style>
+      @media (max-width: 640px) {
+        .nav-links {
+          position: fixed;
+          background-color: rgba(31, 41, 55, 0.8);
+          width: 160px;
+          height: 70vh;
+          top: 0;
+          right: -160px;
+          z-index: 2;
+          transition: 1s;
+        }
+      }
+      .nav-links i {
+        padding: 10px;
+        padding-left: 20px;
+      }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <section
-      class="w-full h-screen bg-[url('images/rome1.jpg')] bg-center bg-cover"
+      class="w-full h-screen bg-[url('images/home/rome1.jpg')] bg-center bg-cover relative"
     >
-      <div class="bg-gray-800 bg-opacity-50 flex justify-between py-8 px-6">
+      <nav
+        class="bg-gray-800 bg-opacity-50 flex justify-between py-0 sm:py-8 px-6 items-center"
+      >
         <h1 class="text-white font-bold text-xl sm:text-2xl">
           ADVENTUR TRAVELS
         </h1>
-        <div class="block" id="menu-button">
+        <div class="nav-links" id="menuButton">
           <i
-            class="fa fa-times text-white text-2xl lg:hidden"
+            class="fa fa-times text-white text-xl block cursor-pointer lg:hidden"
             onclick="hideMenu()"
           ></i>
-          <ul class="hidden lg:flex text-white font-bold text-base">
-            <li class="list-none px-5"><a href="index.html">HOME</a></li>
-            <li class="list-none px-5"><a href="about.html">ABOUT US</a></li>
-            <li class="list-none px-5"><a href="tour.html">TOUR PACKAGE</a></li>
-            <li class="list-none px-5"><a href="booking.html">BOOKING</a></li>
+          <ul class="flex-1 text-center font-bold">
+            <li class="block sm:inline-block relative list-none px-5">
+              <a href="index.html " class="text-white text-base no-underline"
+                >HOME</a
+              >
+            </li>
+            <li class="block sm:inline-block relative list-none px-5">
+              <a href="about.html" class="text-white text-base no-underline"
+                >ABOUT US</a
+              >
+            </li>
+            <li class="block sm:inline-block relative list-none px-5">
+              <a href="tour.html" class="text-white text-base no-underline"
+                >TOUR PACKAGE</a
+              >
+            </li>
+            <li class="block sm:inline-block relative list-none px-5">
+              <a href="booking.html" class="text-white text-base no-underline"
+                >BOOKING</a
+              >
+            </li>
           </ul>
         </div>
         <i
-          class="fa fa-bars text-white text-2xl lg:hidden"
+          class="fa fa-bars text-white text-xl block mr-5 my-10 cursor-pointer lg:hidden"
           onclick="showMenu()"
         ></i>
-      </div>
+      </nav>
       <div class="flex flex-col justify-center items-right h-3/5">
         <h1
           class="text-4xl mx-4 sm:mx-96 sm:text-5xl font-bold text-center sm:text-right"
@@ -150,7 +186,7 @@
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 hover:grayscale"
-            src="images/sheger.webp"
+            src="images/tour/sheger1.jpg"
           />
           <div class="p-6">
             <h2 class="text-xl font-bold">ADDIS ABABA & SURROUNDING</h2>
@@ -162,15 +198,20 @@
               Commission for Africa (ECA), as well as various other continental
               and international organizations.
             </p>
-            <button class="mt-5 bg-gray-800 text-white px-6 py-2 rounded-lg">
-              View More
-            </button>
+            <div class="mt-8">
+              <a
+                href="tour.html"
+                class="mt-5 bg-gray-600 text-white px-6 py-3 border-2 bordergray-700 hover:bg-gray-800 rounded-lg"
+              >
+                View More
+              </a>
+            </div>
           </div>
         </div>
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 hover:grayscale"
-            src="images/lalibela.webp"
+            src="images/tour/lalibela.webp"
           />
           <div class="p-6">
             <h2 class="text-xl font-bold">NORTHERN HISTORIC ROUTES</h2>
@@ -182,15 +223,20 @@
               Highlands are very different from what one might imagine when
               thinking of East Africa. The landscape is unique to this area.
             </p>
-            <button class="mt-5 bg-gray-800 text-white px-6 py-2 rounded-lg">
-              View More
-            </button>
+            <div class="mt-8">
+              <a
+                href="tour.html"
+                class="mt-5 bg-gray-600 text-white px-6 py-3 border-2 bordergray-700 hover:bg-gray-800 rounded-lg"
+              >
+                View More
+              </a>
+            </div>
           </div>
         </div>
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 hover:grayscale"
-            src="images/adventtural.webp"
+            src="images/tour/adventur.webp"
           />
           <div class="p-6">
             <h2 class="text-xl font-bold">ADVENTURAL & COFFEE TOURS</h2>
@@ -202,63 +248,16 @@
               owned farm Kossa started with washed coffees about 30 years ago.
               It is also ideal place for coffee tours.
             </p>
-            <button class="mt-5 bg-gray-800 text-white px-6 py-2 rounded-lg">
-              View More
-            </button>
+            <div class="mt-8">
+              <a
+                href="tour.html"
+                class="mt-5 bg-gray-600 text-white px-6 py-3 border-2 bordergray-700 hover:bg-gray-800 rounded-lg"
+              >
+                View More
+              </a>
+            </div>
           </div>
         </div>
-        <!-- <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
-          <img class="w-full" src="images/northern.webp" />
-          <div class="p-6">
-            <h2 class="text-xl font-bold">SOUTHERN CULTURAL ROUTES</h2>
-            <p class="leading-6 text-justify mt-4">
-              The Lower Omo River in south west Ethiopia is home to eight
-              different tribes whose population is about 200,000 inhabitants.
-              They have lived there for centuries. The Lower Omo Valley is a
-              spectacularly beautiful area with diverse ecosystems including
-              grasslands, volcanic outcrops, and one of the few remaining
-              riverine forests in semi-arid Africa which supports a wide variety
-              of wildlife.
-            </p>
-            <button class="mt-5 bg-gray-800 text-white px-6 py-2 rounded-lg">
-              View More
-            </button>
-          </div>
-        </div>
-        <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
-          <img class="w-full" src="images/eastern.webp" />
-          <div class="p-6">
-            <h2 class="text-xl font-bold">EASTERN ROUTES</h2>
-            <p class="leading-6 text-justify mt-4">
-              It is some measure of the Danakil’s geological activity that more
-              than 30 active or dormant volcanoes-roughly one-quarter of the
-              African total are listed by the Smithsonian Institute Global
-              Volcanism Program. These volcanoes are all geological infants,
-              having formed over the past million years, and a great many took
-              their present shape within the last 10,000 years.
-            </p>
-            <button class="mt-5 bg-gray-800 text-white px-6 py-2 rounded-lg">
-              View More
-            </button>
-          </div>
-        </div>
-        <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
-          <img class="w-full" src="images/hiking.webp" />
-          <div class="p-6">
-            <h2 class="text-xl font-bold">HIKING & TREKKING TOURS</h2>
-            <p class="leading-6 text-justify mt-4">
-              These itineraries are special and custom made, Which intend for
-              those who don’t have time for Ras Dashen, to take advantage to the
-              second peak of the park. This trip doesn`t mean that everyone can
-              do it but as mentioned above, it needs a good level of physical
-              fitness to accomplish or to get in to the Bwahit Ras 4440m asl (
-              second peak of the park).
-            </p>
-            <button class="mt-5 bg-gray-800 text-white px-6 py-2 rounded-lg">
-              View More
-            </button>
-          </div>
-        </div> -->
       </div>
     </section>
 
@@ -273,7 +272,7 @@
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 hover:grayscale"
-            src="images/amsterdam.jpg"
+            src="images/tour/amsterdam.jpg"
           />
           <div class="p-6">
             <h2 class="text-xl font-bold">AMSTERDAM</h2>
@@ -287,15 +286,20 @@
               lively atmosphere of its cafes and nightlife, Amsterdam promises
               an unforgettable experience for every traveler.
             </p>
-            <button class="mt-5 bg-gray-800 text-white px-6 py-2 rounded-lg">
-              View More
-            </button>
+            <div class="mt-8">
+              <a
+                href="tour.html"
+                class="mt-5 bg-gray-600 text-white px-6 py-3 border-2 bordergray-700 hover:bg-gray-800 rounded-lg"
+              >
+                View More
+              </a>
+            </div>
           </div>
         </div>
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 hover:grayscale"
-            src="images/sydney.jpg"
+            src="images/tour/sydney.jpg"
           />
           <div class="p-6">
             <h2 class="text-xl font-bold">SYDENY</h2>
@@ -309,15 +313,20 @@
               explore the diverse neighborhoods, or indulge in world-class
               dining and shopping experiences.
             </p>
-            <button class="mt-5 bg-gray-800 text-white px-6 py-2 rounded-lg">
-              View More
-            </button>
+            <div class="mt-8">
+              <a
+                href="tour.html"
+                class="mt-5 bg-gray-600 text-white px-6 py-3 border-2 bordergray-700 hover:bg-gray-800 rounded-lg"
+              >
+                View More
+              </a>
+            </div>
           </div>
         </div>
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110 hover:opacity-80 hover:grayscale"
-            src="images/dubai1.jpg"
+            src="images/tour/dubai1.jpg"
           />
           <div class="p-6">
             <h2 class="text-xl font-bold">DUBAI</h2>
@@ -331,9 +340,14 @@
               thrilling desert safari. With Andentur Travels, immerse yourself
               in the extravagance and cultural richness of Dubai and more.
             </p>
-            <button class="mt-5 bg-gray-800 text-white px-6 py-2 rounded-lg">
-              View More
-            </button>
+            <div class="mt-8">
+              <a
+                href="tour.html"
+                class="mt-5 bg-gray-600 text-white px-6 py-3 border-2 bordergray-700 hover:bg-gray-800 rounded-lg"
+              >
+                View More
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -342,7 +356,7 @@
     <!-- footer section -->
 
     <section
-      class="w-full bg-[url('images/footer.jpg')] bg-cover bg-center pt-20 pb-10"
+      class="w-full bg-[url('images/home/footer.jpg')] bg-cover bg-center pt-20 pb-10"
     >
       <div class="p-0 sm:p-16">
         <div class="flex flex-wrap justify-around pb-10">
@@ -400,19 +414,19 @@
           <a href="#"><i class="fa-brands fa-youtube"></i></a>
         </div>
         <p class="text-white text-center mt-5">
-          &copy; <span id="year" class="font-bold"> 2024 </span> KurazTech Interns. All
-          rights reserved.
+          &copy; <span id="year" class="font-bold"> 2024 </span> KurazTech
+          Interns. All rights reserved.
         </p>
       </div>
     </section>
 
     <script>
-      const menu = document
-        .getElementById("menu-button")
-        .addEventListener("click", showMenu);
+      const items = document.getElementById("menuButton");
       function showMenu() {
-        const menu = document.querySelector("ul");
-        menu.classList.toggle("hidden");
+        items.style.right = "0px";
+      }
+      function hideMenu() {
+        items.style.right = "-240px";
       }
     </script>
   </body>

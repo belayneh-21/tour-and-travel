@@ -8,33 +8,51 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <style>
+      @media (max-width:640px){
+        .nav-links{
+          position: fixed;
+          background-color: rgba(31, 41, 55, 0.8);
+          width: 160px;
+          height: 70vh;
+          top: 0;
+          right: -160px;
+          z-index: 2;
+          transition: 1s;
+        }
+      }
+      .nav-links i{
+        padding: 10px;
+        padding-left: 20px;
+      }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <section
-      class="w-full h-[60vh] bg-[url('images/rome.jpg')] bg-center bg-cover"
+      class="w-full h-[60vh] bg-[url('images/tour/rome.jpg')] bg-center bg-cover relative"
     >
-      <div class="bg-gray-800 bg-opacity-80 flex justify-between py-8 px-6">
-        <h1 class="text-white font-bold text-xl sm:text-2xl">
-          ADVENTUR TRAVELS
-        </h1>
-        <div class="block" id="menu-button">
-          <i
-            class="fa fa-times text-white text-2xl lg:hidden"
-            onclick="hideMenu()"
-          ></i>
-          <ul class="hidden lg:flex text-white font-bold text-base">
-            <li class="list-none px-5"><a href="index.html">HOME</a></li>
-            <li class="list-none px-5"><a href="about.html">ABOUT US</a></li>
-            <li class="list-none px-5"><a href="tour.html">TOUR PACKAGE</a></li>
-            <li class="list-none px-5"><a href="booking.html">BOOKING</a></li>
-          </ul>
-        </div>
+    <nav class="bg-gray-800 bg-opacity-50 flex justify-between py-0 sm:py-8 px-6 items-center">
+      <h1 class="text-white font-bold text-xl sm:text-2xl">
+        ADVENTUR TRAVELS
+      </h1>
+      <div class="nav-links" id="menuButton">
         <i
-          class="fa fa-bars text-white text-2xl lg:hidden"
-          onclick="showMenu()"
+          class="fa fa-times text-white text-xl block cursor-pointer lg:hidden"
+          onclick="hideMenu()"
         ></i>
+        <ul class="flex-1 text-center font-bold ">
+          <li class="block sm:inline-block relative list-none px-5"><a href="index.html " class="text-white text-base no-underline">HOME</a></li>
+          <li class="block sm:inline-block relative list-none px-5"><a href="about.html" class="text-white text-base no-underline">ABOUT US</a></li>
+          <li class="block sm:inline-block relative list-none px-5"><a href="tour.html" class="text-white text-base no-underline">TOUR PACKAGE</a></li>
+          <li class="block sm:inline-block relative list-none px-5"><a href="booking.html" class="text-white text-base no-underline">BOOKING</a></li>
+        </ul>
       </div>
+      <i
+        class="fa fa-bars text-white text-xl block mr-5 my-10 cursor-pointer lg:hidden"
+        onclick="showMenu()"
+      ></i>
+    </nav>
       <div class="flex flex-col justify-center items-center text-white h-3/5">
         <h1 class="text-4xl mx-4 sm:mx-96 sm:text-5xl font-bold text-center">
           Our Packages
@@ -43,7 +61,7 @@
     </section>
 
     <!-- local tour packages in Ethiopia -->
-    <section class="m-auto mt-10 w-11/12 sm:w-5/6 py-10 bg-gray-100 px-10 rounded-2xl">
+    <section class="m-auto mt-10 w-11/12 sm:w-5/6 py-10 bg-gray-100 rounded-2xl">
       <h1 class="text-4xl sm:text-5xl text-center font-bold mb-10">
         Our Packages
       </h1>
@@ -55,7 +73,7 @@
         <div class="bg-white rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/sheger.webp"
+            src="images/tour/sheger1.jpg"
           />
           <div class="p-6">
             <h2 class="text-xl font-bold">ADDIS ABABA & SURROUNDING</h2>
@@ -80,19 +98,19 @@
             >
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
-            <span class="text-gray-900 font-bold text-xl">$1399</span>
-            <button
+            <span class="text-gray-900 font-bold text-xl">$1250</span>
+            <a href="booking.html"
               class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
 
         <div class="bg-white rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/lalibela.webp"
+            src="images/tour/lalibela.webp"
           />
           <div class="p-6">
             <h2 class="text-xl font-bold">NORTHERN HISTORIC ROUTES</h2>
@@ -118,19 +136,19 @@
             >
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
-            <span class="text-gray-900 font-bold text-xl">$1399</span>
-            <button
+            <span class="text-gray-900 font-bold text-xl">$699</span>
+            <a href="booking.html"
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
 
         <div class="bg-white rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/adventtural.webp"
+            src="images/tour/adventur.webp"
           />
           <div class="p-6">
             <h2 class="text-xl font-bold">ADVENTURAL & COFFEE TOURS</h2>
@@ -155,19 +173,19 @@
             >
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
-            <span class="text-gray-900 font-bold text-xl">$1399</span>
-            <button
+            <span class="text-gray-900 font-bold text-xl">$399</span>
+            <a href="booking.html"
               class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
 
         <div class="bg-white rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/northern.webp"
+            src="images/tour/northern.webp"
           />
           <div class="p-6">
             <h2 class="text-xl font-bold">SOUTHERN CULTURAL ROUTES</h2>
@@ -193,19 +211,19 @@
           </div>
 
           <div class="px-6 py-4 flex items-center justify-between">
-            <span class="text-gray-900 font-bold text-xl">$1399</span>
-            <button
+            <span class="text-gray-900 font-bold text-xl">$299</span>
+            <a href="booking.html"
               class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
 
         <div class="bg-white rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/eastern.webp"
+            src="images/tour/eastern.webp"
           />
           <div class="p-6">
             <h2 class="text-xl font-bold">EASTERN ROUTES</h2>
@@ -231,19 +249,19 @@
             >
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
-            <span class="text-gray-900 font-bold text-xl">$1399</span>
-            <button
+            <span class="text-gray-900 font-bold text-xl">$499</span>
+            <a href="booking.html"
               class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
 
         <div class="bg-white rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/hiking.webp"
+            src="images/tour/hiking.webp"
           />
           <div class="p-6">
             <h2 class="text-xl font-bold">HIKING & TREKKING TOURS</h2>
@@ -268,12 +286,12 @@
             >
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
-            <span class="text-gray-900 font-bold text-xl">$1399</span>
-            <button
+            <span class="text-gray-900 font-bold text-xl">$299</span>
+            <a href="booking.html"
               class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
       </div>
@@ -292,7 +310,7 @@
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/amsterdam.jpg"
+            src="images/tour/amsterdam.jpg"
           />
           <div class="px-6 py-4">
             <h2 class="font-bold text-xl mb-2">Amsterdam, Netherland</h2>
@@ -320,18 +338,18 @@
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
             <span class="text-gray-900 font-bold text-xl">$1399</span>
-            <button
+            <bua href="booking.html"tton
               class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
 
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/sydney.jpg"
+            src="images/tour/sydney.jpg"
           />
           <div class="px-6 py-4">
             <h2 class="font-bold text-xl mb-2">Sydney, Australia</h2>
@@ -358,17 +376,17 @@
           </div>
           <div class="px-6 py-4 mb-0 flex items-center justify-between">
             <span class="text-gray-900 font-bold text-xl">$1399</span>
-            <button
+            <a href="booking.html"
               class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/dubai1.jpg"
+            src="images/tour/dubai1.jpg"
           />
           <div class="px-6 py-4">
             <h2 class="font-bold text-xl mb-2">Dubai, UAE</h2>
@@ -396,17 +414,17 @@
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
             <span class="text-gray-900 font-bold text-xl">$899</span>
-            <button
+            <a href="booking.html"
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/paris3.jpg"
+            src="images/tour/paris3.jpg"
           />
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">Paris, France</div>
@@ -433,17 +451,17 @@
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
             <span class="text-gray-900 font-bold text-xl">$999</span>
-            <button
+            <a href="booking.html"
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/bali.jpg"
+            src="images/tour/bali.jpg"
           />
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">Bali, Indonesia</div>
@@ -470,17 +488,17 @@
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
             <span class="text-gray-900 font-bold text-xl">$899</span>
-            <button
+            <a href="booking.html"
               class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/cape.jpg"
+            src="images/tour/cape.jpg"
           />
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">Cape Town, South Africa</div>
@@ -507,18 +525,18 @@
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
             <span class="text-gray-900 font-bold text-xl">$1099</span>
-            <button
+            <a href="booking.html"
               class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
 
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/kyoto.jpg"
+            src="images/tour/kyoto.jpg"
           />
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">Kyoto, Japan</div>
@@ -545,11 +563,11 @@
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
             <span class="text-gray-900 font-bold text-xl">$1299</span>
-            <button
+            <a href="booking.html"
               class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
 
@@ -557,7 +575,7 @@
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/greece.jpg"
+            src="images/tour/greece.jpg"
           />
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">Santorini, Greece</div>
@@ -583,11 +601,11 @@
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
             <span class="text-gray-900 font-bold text-xl">$1399</span>
-            <button
+            <bua href="booking.html"tton
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
 
@@ -595,7 +613,7 @@
         <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full transition duration-300 ease-in-out transform hover:scale-110"
-            src="images/ny.jpg"
+            src="images/tour/ny.jpg"
           />
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">New York City, USA</div>
@@ -622,11 +640,11 @@
           </div>
           <div class="px-6 py-4 flex items-center justify-between">
             <span class="text-gray-900 font-bold text-xl">$1499</span>
-            <button
+            <a href="booking.html"
               class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded"
             >
               Book Now
-            </button>
+          </a>
           </div>
         </div>
       </div>
@@ -635,7 +653,7 @@
     <!-- footer section -->
 
     <section
-      class="w-full bg-[url('images/footer.jpg')] bg-cover bg-center pt-20 pb-10"
+      class="w-full bg-[url('images/home/footer.jpg')] bg-cover bg-center pt-20 pb-10"
     >
       <div class="p-0 sm:p-16">
         <div class="flex flex-wrap justify-around pb-10">
@@ -700,12 +718,12 @@
     </section>
 
     <script>
-      const menu = document
-        .getElementById("menu-button")
-        .addEventListener("click", showMenu);
+      const items = document.getElementById("menuButton");
       function showMenu() {
-        const menu = document.querySelector("ul");
-        menu.classList.toggle("hidden");
+        items.style.right = "0px";
+      }
+      function hideMenu() {
+        items.style.right = "-240px";
       }
     </script>
   </body>
