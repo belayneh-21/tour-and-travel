@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour and Travel website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section
+      class="w-full h-[80vh] bg-[url('images/rocky.jpg')] bg-center bg-cover"
+    >
+      <div class="bg-gray-800 bg-opacity-80 flex justify-between py-8 px-6">
+        <h1 class="text-white font-bold text-xl sm:text-2xl">
+          ADVENTUR TRAVELS
+        </h1>
+        <div class="block" id="menu-button">
+          <i
+            class="fa fa-times text-white text-2xl lg:hidden"
+            onclick="hideMenu()"
+          ></i>
+          <ul class="hidden lg:flex text-white font-bold text-base">
+            <li class="list-none px-5"><a href="index.html">HOME</a></li>
+            <li class="list-none px-5"><a href="about.html">ABOUT US</a></li>
+            <li class="list-none px-5"><a href="tour.html">TOUR PACKAGE</a></li>
+            <li class="list-none px-5"><a href="booking.html">BOOKING</a></li>
+          </ul>
+        </div>
+        <i
+          class="fa fa-bars text-white text-2xl lg:hidden"
+          onclick="showMenu()"
+        ></i>
+      </div>
+      <div class="flex flex-col justify-center items-center text-white h-3/5">
+        <h1 class="text-4xl mx-4 sm:mx-96 sm:text-5xl font-bold text-center">
+          About Us
+        </h1>
+        <p class="mx-4 sm:mx-96 pt-6 sm:pt-10 text-xl sm:text-2xl text-center">
+          Experience the World’s Wonders
+        </p>
+      </div>
+    </section>
+
+    <!-- about us -->
+
+    <section
+      class="m-auto sm:my-12 w-11/12 sm:w-5/6 bg-green-100 rounded-lg shadow-2xl"
+    >
+      <div class="text-center">
+        <h1 class="text-3xl sm:text-5xl p-7 font-bold text-black">About us</h1>
+      </div>
+      <div class="px-4 pb-20">
+        <h3
+          class="text-3xl font-bold text-blue-500 text-left sm:text-center py-3"
+        >
+          Our vision
+        </h3>
+        <div
+          class="flex m-auto justify-center text-justify flex-wrap w-full sm:w-5/6"
+        >
+          <p class="text-lg leading-relaxed mb-4">
+            Our Vision At the heart of our company is a vision to redefine the
+            way the world experiences travel. We believe that travel has the
+            power to transform lives, foster cross-cultural understanding, and
+            inspire a deeper connection with our planet.
+          </p>
+          <p class="text-lg leading-relaxed mb-4">
+            As renowned explorer Sir Edmund Hillary once said, "It is not the
+            mountain we conquer, but ourselves." This guiding principle drives
+            us to continually push the boundaries of what's possible, empowering
+            our guests to embark on journeys of self-discovery and personal
+            growth.
+          </p>
+          <p class="text-lg leading-relaxed">
+            Whether you're seeking a cultural odyssey, an adrenaline-fueled
+            expedition, or a relaxing retreat, our knowledgeable travel
+            consultants will work closely with you to design a journey that
+            exceeds your every expectation. From the snow-capped peaks of the
+            Himalayas to the sun-drenched beaches of the Caribbean, we'll
+            transport you to the world's most captivating corners, leaving you
+            with cherished memories that last a lifetime.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Members Section -->
+    <section class="m-auto w-5/6  my-10 mb-20">
+      <h2 class="font-bold text-4xl text-center text-blue-500">Our Members</h2>
+      <div class="mx-auto p-4 pt-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div class="rounded-lg overflow-hidden shadow-lg  p-4">
+          <img
+            src="images/skipper.jpg"
+            alt=""
+            class="w-3/4 object-top h-48 object-cover rounded-t-lg"
+          />
+          <h3 class="text-xl pt-5 font-bold text-gray-800 mb-4">CEO</h3>
+          <p class="text-black leading-relaxed">Skipper</p>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-lg  p-4">
+          <img
+            src="images/kulalski.jpg"
+            alt=""
+            class="w-3/4 object-top h-48 object-cover rounded-t-lg"
+          />
+          <h3 class="text-xl pt-5 font-bold text-gray-800 mb-4">
+            Executive director
+          </h3>
+          <p class="text-black leading-relaxed">Kuwalski</p>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-lg  p-4">
+          <img
+            src="images/rico.jpg"
+            alt=""
+            class="w-3/4 object-top h-48 object-cover rounded-t-lg"
+          />
+          <h3 class="text-xl pt-5 font-bold text-gray-800 mb-4">Manager</h3>
+          <p class="text-black leading-relaxed">Rico</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section
+      class="bg-gradient-to-b from-gray-900 to-gray-600 h-screen text-white p-4"
+    >
+      <div class="mt-10 max-w-2xl m-auto p-4 sm:p-12 ">
+        <h2 class="text-2xl font-bold mb-4">Leave Your Feedback</h2>
+        <form>
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-bold mb-2">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="w-full rounded p-2 pl-10 text-sm text-gray-700"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-bold mb-2"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="w-full rounded p-2 pl-10 text-sm text-gray-700"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="feedback" class="block text-sm font-bold mb-2"
+              >Feedback</label
+            >
+            <textarea
+              id="feedback"
+              class="w-full p-2 pl-10 rounded text-sm text-gray-700 h-48"
+            ></textarea>
+          </div>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section
+      class="w-full bg-[url('images/footer.jpg')] bg-cover bg-center pt-20 pb-10"
+    >
+      <div class="p-0 sm:p-16">
+        <div class="flex flex-wrap justify-around pb-10">
+          <div class="text-white text-lg mb-6">
+            <h3 class="font-bold text-2xl pb-5">Contact Us</h3>
+            <div class="flex items-center py-2">
+              <i class="fa-solid fa-location-dot pr-3 text-2xl"></i>
+              <p>22, Hanan plaza building 5th floor</p>
+            </div>
+            <div class="flex items-center py-2">
+              <i class="fa-solid fa-phone pr-3 text-2xl"></i>
+              <p>+251-123-654321 /+251-912-345678</p>
+            </div>
+            <div class="flex items-center py-2">
+              <i class="fa-regular fa-envelope pr-3 text-2xl"></i>
+              <p>P.O.BOX:105212 A.A Ethiopia</p>
+            </div>
+            <div class="flex items-center py-2">
+              <i class="fa-solid fa-envelope pr-3 text-2xl"></i>
+              <p>Example@gmail.com</p>
+            </div>
+            <div class="flex items-center py-2">
+              <i class="fa-solid fa-envelope pr-3 text-2xl"></i>
+              <p>info@exampleethiopia.com</p>
+            </div>
+          </div>
+          <div class="text-white text-xl mb-6">
+            <h3 class="font-bold text-2xl pb-5">Destinations</h3>
+            <ul>
+              <li class="py-2">Adiss Abeba</li>
+              <li class="py-2">Lalibela</li>
+              <li class="py-2">Gonder</li>
+              <li class="py-2">Dubai</li>
+              <li class="py-2">Amsterdam</li>
+              <li class="py-2">Paris</li>
+            </ul>
+          </div>
+          <div class="text-white text-xl mb-6">
+            <h3 class="font-bold text-2xl pb-5">Experiences</h3>
+            <ul>
+              <li class="py-2"><a href="#">Family Package</a></li>
+              <li class="py-2"><a href="#">Historical Package</a></li>
+              <li class="py-2"><a href="#">Cultural Package</a></li>
+              <li class="py-2"><a href="#">Advatural Package</a></li>
+              <li class="py-2"><a href="#">Luxary Package</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex justify-center text-2xl text-white space-x-6">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p class="text-white text-center mt-5">
+          &copy; <span id="year" class="font-bold"> 2024 </span> KurazTech
+          Interns. All rights reserved.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      const menu = document
+        .getElementById("menu-button")
+        .addEventListener("click", showMenu);
+      function showMenu() {
+        const menu = document.querySelector("ul");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
