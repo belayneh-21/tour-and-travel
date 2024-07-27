@@ -34,20 +34,16 @@ This website serves as a platform for travelers to explore various travel servic
 
 2. **Navigate to the project directory:**
 
-   ```bash
+
    cd tour-and-travel
-   ```
 
 3. **Open `index.html` in your preferred web browser:**
 
-   ```bash
    open index.html
-   ```
+
 4. **or the delopyed website:**
 
-   ```bash
    View https://adventurtravel.netlify.app/
-   ```
 
 ## Usage
 
